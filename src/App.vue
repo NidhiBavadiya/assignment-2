@@ -1,30 +1,19 @@
 <template>
   <div id="app">
-  <router-view v-bind:subjects="subjects"></router-view>
-  <!-- <loginform></loginform> -->
-    
+    <router-view v-bind:developers="developers" :StoreData="StoreData"></router-view>
   </div>
 </template>
 
 <script>
-
-
-// import LoginForm from './components/LoginForm.vue'
-
 export default {
-  name: 'App',
-  //  components:{
-  //   'loginform':LoginForm,
-  //  }
+  name: "App",
   data() {
     return {
-       subjects:['c++','java','html','rect']
-    }
+      developers: ["frontend", "backend"],
+      StoreData: [],
+    };
   },
-
-}
+};
 </script>
 
-<style>
-
-</style>
+<style></style>
