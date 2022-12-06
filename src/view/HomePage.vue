@@ -14,7 +14,9 @@
         <td>{{Store.name}}</td>
         <td>{{Store.email}}</td>
         <td>{{Store.password}}</td>
-        <td>{{Store.city}}</td>
+        <td><ul>
+            <li v-for='cityname in city'  v-bind:key='cityname'>{{Store.cityname}}</li>
+        </ul>{{Store.city}}</td>
         <td>{{Store.gender}}</td>
         <td>{{Store.developer}}</td>
       </tr>

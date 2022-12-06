@@ -39,6 +39,6 @@ a {
   height: 30px;
 }
 h2 {
-  padding: 50px 0 0 0;
+  padding: 20px 0 0 0;
 }
 </style>

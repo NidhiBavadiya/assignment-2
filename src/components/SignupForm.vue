@@ -8,7 +8,7 @@
       <div class="register_detail">
         <form v-on:submit.prevent="Storevalue">
           <div class="name mb-3">
-            <label for="name" class="form-label">name</label> <br />
+            <label for="name" class="form-label"><h4>Name</h4></label>
             <input
               type="text"
               v-validate="'required'"
@@ -16,11 +16,12 @@
               name="name"
               id="name"
               v-model.lazy="blog.name"
-             required>
+              required
+            />
           </div>
 
-         <div class="mail mb-3">
-            <label for="email" class="form-label">Email</label><br />
+          <div class="mail mb-3">
+            <label for="email" class="form-label"><h4>Email</h4></label>
             <input
               type="email"
               v-validate="'required'"
@@ -34,7 +35,7 @@
           </div>
 
           <div class="password mb-3">
-            <label for="Password" class="form-label">Password</label><br />
+            <label for="Password" class="form-label"><h4>Password</h4></label>
             <input
               v-validate="'required'"
               name="password"
@@ -49,7 +50,7 @@
           </div>
 
           <div class="c_password mb-3">
-            <label for="Password1" class="form-label">confirm Password</label><br />
+            <label for="Password1" class="form-label"><h4>Confirm Password</h4></label>
             <input
               v-validate="'required|confirmed:password'"
               name="password_confirmation"
@@ -74,7 +75,7 @@
               v-model="blog.gender"
               required
             />
-            <label for="front" class="r_l">male</label><br />
+            <label for="front" class="r_l">Male</label><br />
             <input
               type="radio"
               class="r1"
@@ -84,24 +85,48 @@
               v-model="blog.gender"
               required
             />
-            <label for="back" class="r_l">female</label><br />
+            <label for="back" class="r_l">Female</label><br />
           </div>
 
           <div class="c_city">
-            <h4>city</h4>
-            <input type="checkbox" id='c_1' name="check1" value="Ahmedabad" v-model="blog.city"  />
-            <label for='c_1'>Ahmedabad</label><br />
-            <input type="checkbox" id='c_2' name="check2" value="surat" v-model="blog.city"    />
-            <label for='c_2'>surat</label><br />
-            <input type="checkbox" id='c_3' name="check3" value="rajkot" v-model="blog.city" />
-            <label for='c_3'>rajkot</label><br />
-            <input type="checkbox" id='c_4' name="check4" value="baroda" v-model="blog.city" />
-            <label for='c_4'>baroda</label><br />
+            <h4>City</h4>
+            <input
+              type="checkbox"
+              id="c_1"
+              name="check1"
+              value="Ahmedabad"
+              v-model="blog.city"
+            />
+            <label for="c_1">Ahmedabad</label><br />
+            <input
+              type="checkbox"
+              id="c_2"
+              name="check2"
+              value="surat"
+              v-model="blog.city"
+            />
+            <label for="c_2">Surat</label><br />
+            <input
+              type="checkbox"
+              id="c_3"
+              name="check3"
+              value="rajkot"
+              v-model="blog.city"
+            />
+            <label for="c_3">Rajkot</label><br />
+            <input
+              type="checkbox"
+              id="c_4"
+              name="check4"
+              value="baroda"
+              v-model="blog.city"
+            />
+            <label for="c_4">Baroda</label><br />
           </div>
 
           <div class="subject">
-            <h4>select subject</h4>
-            <select v-model="blog.developer"    required>
+            <h4>Select Subject</h4>
+            <select v-model="blog.developer" required>
               <option v-for="developer in developers" v-bind:key="developer">
                 {{ developer }}
               </option>
@@ -109,10 +134,8 @@
           </div>
 
           <div class="buttons">
-            <button type="submit" class="btn2">
-              Submit
-            </button>
-        
+            <button type="submit" class="btn2">Submit</button>
+
             <!-- <button type="submit" class="btn2"><router-link to ='/login'>Login</router-link></button> -->
           </div>
         </form>
@@ -167,6 +190,7 @@ export default {
 h4 {
   margin: 0px;
   color: #2a3d43;
+  padding: 0 0 10px 0;
 }
 select {
   background-color: #daede9;
@@ -179,10 +203,10 @@ a {
 }
 .Sign {
   display: flex;
-  padding: 20px;
+  /* padding: 20px; */
   box-shadow: 1px 0px 30px 3px #0971688c;
   width: 70%;
-  margin: 60px auto;
+  margin: 30px auto;
 }
 .buttons {
   text-align: center;
@@ -198,7 +222,7 @@ a {
 }
 .register_detail {
   text-align: left;
-  padding: 0 0 0 20px;
+  /* padding: 0 0 0 20px; */
   width: 50%;
 }
 .login_img {
@@ -213,11 +237,11 @@ a {
   display: flex;
 }
 .r1 {
-  margin: 0 0 0 10px;
+  margin: -12px 0 0 10px;
 }
-.r_l {
+/* .r_l {
   margin: 0 0 0 10px;
-}
+} */
 .c_city {
   padding: 30px 0 0 0;
   text-align: left;
@@ -226,6 +250,7 @@ label {
   text-align: left;
   color: #2a3d43;
   font-size: 14px;
+  padding: 0 0 0 5px;
 }
 input {
   margin: 0 0 0 50px;

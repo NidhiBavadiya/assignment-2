@@ -68,15 +68,15 @@ export default {
           console.log("enter valid email");
           if (element.password === newValue.password) {
             console.log("password  match");
-            alert("Email & Password are match");
+            alert("Login Successfully");
 
-    //store value in local storage
+            //store value in local storage
             localStorage.setItem("logindata", JSON.stringify(this.StoreData));
 
-    //for get value from local storage
-            const storedBlogs = JSON.parse(localStorage.getItem("logindata"));
-            
-            console.log(storedBlogs);
+            //for get value from local storage
+            // const storedBlogs = JSON.parse(localStorage.getItem("logindata"));
+
+            // console.log(storedBlogs);
             this.$router.push("/home");
           } else {
             alert("enter valid password");
@@ -107,6 +107,11 @@ select {
 a {
   text-decoration: none;
   color: white;
+}
+@media (max-width: 991px) {
+  .login {
+  display: inline block;
+}
 }
 .login {
   display: flex;
